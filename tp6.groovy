@@ -47,12 +47,12 @@ node {
   stage('3- Récupération des crédentials'){
     withCredentials([
       usernamePassword(
-          credentialsId: 'missing_credential',
+          credentialsId: 'MyTokenGIThub',
           usernameVariable: "DEMO_USERNAME",
           passwordVariable: "DEMO_PASS"
       ),
       file(
-        credentialsId: 'missing_secret_file',
+        credentialsId: 'MySecretFile',
         variable: 'SECRET_FILE')
     ]){
 
