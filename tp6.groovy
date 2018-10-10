@@ -13,7 +13,7 @@ node {
   }
   stage ('1- Print all env'){
     echo 'Affiche toutes les variables environnement disponibles :'
-    sh 'env'
+
   }
 }
 
@@ -23,10 +23,10 @@ node {
 
 node {
   stage('2- Print parameter'){
-    sh '''
+ 
        echo "Affichage du paramètre saisie par l'utilisateur"
        echo "  valeur du paramètre : $missing_param"
-    '''
+ 
 
     // Pour récupérer la valeur dans le script
     def value = params.missing_param
